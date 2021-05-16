@@ -91,7 +91,9 @@ if __name__=="__main__":
         fundNum = fundNum + 1
         # if fundNum == 1000:
         #     break 
-            
+
+        
+#以下进行Dao层操作Begin>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     # 使用 cursor() 方法创建一个游标对象 cursor
     cursor = db.cursor() 
     try:
@@ -105,10 +107,10 @@ if __name__=="__main__":
     except Exception as e:
         # 回滚
         db.rollback()
-        raise Exception("插入数据库错误！", e)
+        raise Exception("插入数据库错误！", e)End
     # 关闭数据库连接
     db.close()
-
+#以下进行Dao层操作End>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
     '''
     更新日期
