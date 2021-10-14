@@ -107,7 +107,7 @@ if __name__=="__main__":
     except Exception as e:
         # 回滚
         db.rollback()
-        raise Exception("插入数据库错误！", e)End
+        raise Exception("插入数据库错误！", e)
     # 关闭数据库连接
     db.close()
 #以下进行Dao层操作End>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
